@@ -62,3 +62,16 @@ console.log(7 !== 7 || 4 < 3);
 
 let x = 3;
 console.log(x > 4 || !(x > 2));
+
+//typeof 연산자
+console.log(typeof 101);
+console.log(typeof 'chaehee');
+console.log(typeof true);
+
+// not a number
+console.log(typeof 'Hello' + 'Chaehee');
+console.log(typeof 8 - 3);
+
+// not a number 해결방법
+console.log(typeof ('Hello' + 'Chaehee'));
+console.log(typeof (8 - 3));
