@@ -75,3 +75,84 @@ console.log(typeof 8 - 3);
 // not a number 해결방법
 console.log(typeof ('Hello' + 'Chaehee'));
 console.log(typeof (8 - 3));
+
+// 형 변환(type conversion)
+console.log('10'+'5');
+console.log(10 + 5);
+
+console.log(Number('10')+ Number('5'));
+console.log(String(10) + String(5));
+
+//숫자 -> 문자
+let a = 123;
+console.log(a);
+console.log(String(a));
+console.log(typeof(a));
+console.log(typeof String(a));
+
+console.log('');
+
+//불린 -> 숫자
+let b = true
+console.log(b);
+console.log(Number(b)); //true는 1, false는 0
+console.log(typeof b);
+console.log(typeof Number(b));
+
+//falsy값 -> '', 0, NaN
+
+console.log('4' - true);
+
+//산술연산 (+, -, *, /, %, **)
+console.log(4 + '2');
+console.log(4 + 2);
+console.log(4 - true);
+console.log(4 * false);
+console.log(4 / '2');
+console.log('4' ** true);
+console.log(4 % 'two');
+
+//관계 비교 연산(<, <=, >, >=)
+console.log(2 < '3');
+console.log(2 > true);
+console.log('2' <= false);
+console.log('two' >= 1);
+
+//같음 비교 연산(===, !==, ==, !=)
+console.log(1 === '1');
+console.log(1 === true);
+console.log(1 == '1');
+console.log(1 == true);
+
+//템플릿문자열(template strings)
+let year = 2022;
+let month = 3;
+let day = 11;
+
+console.log('생년월일은 ' + year + '년 ' + month + '월 ' + day + '일 입니다.');
+console.log(`생년월일은 ${2022}년 ${3}월 ${11}일 입니다.`)
+
+let myNumber = 3;
+
+function gettwice(x) {
+  return x * 2;
+};
+
+console.log(`${myNumber}의 두 배는 ${gettwice(myNumber)}입니다.`)
+
+//실습과제
+function calcWage(name, time, wage) {
+  let total = time * wage;
+
+  console.log(`${name}님의 근무 시간은 총 ${time}시간이며, 최종 급여는 ${total}원 입니다.`); // 코드를 채워 넣으세요.
+}
+
+calcWage('이채희', 208, 11340);
+
+//null과 undefined
+let cup;
+console.log(cup); //undefined
+cup = '물';
+console.log(cup); //물
+cup = null;
+console.log(cup); //null
